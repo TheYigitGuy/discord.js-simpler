@@ -10,5 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.1"
+  },
+  "repository": {
+    "directory": "https://github.com/TheYigitGuy/discord.js-simpler",
+    "url": "https://github.com/TheYigitGuy/discord.js-simpler"
   }
 }
