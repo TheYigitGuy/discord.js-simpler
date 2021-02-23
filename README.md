@@ -10,17 +10,17 @@ npm install --save discord.js-simplified
 
 ## Getting Started
 
-First of All, lets get some things done.
+First of All, lets handle our commands and events.
 
-**index.js**
+**index.js example:**
 
 ```js
 const simplified = require("discord.js-simpler");
 const Discord = require("discord.js");
 const client = new simplified.bot('your-bot-token-here')
 
-client.handleCommands('path-to-the-commands-folder')
-client.handleEvents('path-to-the-events-folder')
+client.handleCommands('./commands')
+client.handleEvents('./events')
 ```
 
 ## Example Event
