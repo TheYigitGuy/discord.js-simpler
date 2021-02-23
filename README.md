@@ -18,9 +18,10 @@ First of All, lets handle our commands and events.
 const simplified = require("discord.js-simpler");
 const Discord = require("discord.js");
 const client = new simplified.bot('your-bot-token-here')
+const path = require("path")
 
-client.handleCommands('./commands')
-client.handleEvents('./events')
+client.handleCommands(`${__dirname}/commands`)
+client.handleEvents(`${__dirname}/events`)
 ```
 
 ## Example Event
