@@ -25,9 +25,9 @@ class SimplifiedBot extends Client {
      */
     handleCommands(Path) {
         try {
-        const cmdFiles = fs.readdirSync(path.join(__dirname, Path)).filter(file => file.endsWith(".js" || ".ts"))
+        const cmdFiles = fs.readdirSync(Path).filter(file => file.endsWith(".js" || ".ts"))
         cmdFiles.map((file) => {
-            const command = require(path.join(__dirname, file));
+            const command = require(`${Path}/${file}`);
             this.commands.set(command.name, command)
             
                 command.aliases.map((alias) => {
@@ -47,10 +47,10 @@ class SimplifiedBot extends Client {
      * client.handleCommands("./events")
      */
     handleEvents(Path) {
-        const eFiles = fs.readdir(path.join(__dirname, Path), (err, files) => {
+        const eFiles = fs.readdir(Path, (err, files) => {
             if(err) return console.error(err);
             files.map((file) => {
-                const eFile = require(path.join(__dirname, file))
+                const eFile = require(`${Path}/${file}`)
                 this.events.set(eFile.name, eFile)
                 this.on(eFile.name, (...args) => {
                     eFile.run(this, ...args);
