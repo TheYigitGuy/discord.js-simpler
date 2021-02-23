@@ -14,5 +14,8 @@
   "repository": {
     "directory": "https://github.com/TheYigitGuy/discord.js-simpler",
     "url": "https://github.com/TheYigitGuy/discord.js-simpler"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.6"
   }
 }
